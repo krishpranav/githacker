@@ -12,3 +12,7 @@ python3 -m pip install -r requirements.txt
 python3 githacker.py
 ```
 
+# Example
+```
+python GitHacker.py http://127.0.0.1/.git/
+```
