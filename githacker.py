@@ -143,8 +143,6 @@ def main():
         print("        python GitHacker.py [Website]")
         print("Example : ")
         print("        python Githack.py http://127.0.0.1/.git/")
-        print("Author : ")
-        print("        wangyihang <wangyihanger@gmail.com>")
         exit(1)
 
     # Handle git
