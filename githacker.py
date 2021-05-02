@@ -28,3 +28,23 @@ def dirlist(path, allfile):
     return allfile
 
 
+def downloadFile(url, path):
+    if url in log:
+        print("[-] Downloaded!")
+    else:
+        log.append(url)
+    index = path[::-1].find("/")
+    folder = path[0:-index]
+    try:
+        print("[+] Make dir : {}".format(folder))
+        os.makedirs(folder)
+    except:
+        print("[-] Folder already existed!")
+    print("[!] Getting -> {}".format(url))
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open(path, "wb") as f:
+            f.write(response.content)
+            print("[+] Success!")
+    else:
+        print("[-] [{}]".format(response.status_code))
